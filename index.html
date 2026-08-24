@@ -1,0 +1,7 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#08080b"><title>My Movie ❤️</title><link rel="stylesheet" href="style.css"></head>
+<body><header><div><b>My Movie 💗</b><small>Just You & Hooria</small></div><span>🔒 Private Room <b id="roomCode">LOVE1234</b></span></header>
+<main><nav><label>＋ Add Movie<input id="file" type="file" accept="video/*" hidden></label><button id="invite">Invite Hooria 🔗</button><button id="cam">📹 Camera</button><button id="mic">🎙️ Mic</button></nav>
+<section class="stage"><video id="movie" controls playsinline></video><div id="empty">Add your movie 🎬<small>Upload once, then both viewers use the same room.</small></div>
+<div id="call"><div>Hooria (Viewer) 💗 <button onclick="call.style.display='none'">×</button></div><video id="remote" autoplay playsinline></video><p><button id="startCall">📞 Call</button><button id="endCall">⛔ End</button></p></div></section>
+<section class="controls"><button id="back">↩ 10s</button><button id="play">▶ / ⏸</button><button id="fwd">10s ↪</button><button id="mute">🔊</button><input id="vol" type="range" min="0" max="1" step=".01" value=".8"></section>
+<section class="chat"><b>💬 Chat</b><div id="msgs"></div><form id="form"><input id="text" placeholder="Write a message…"><button>Send</button></form></section></main><script src="app.js"></script></body></html>
