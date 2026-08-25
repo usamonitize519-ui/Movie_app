@@ -11,7 +11,7 @@ const dir=path.join(__dirname,"uploads"); fs.mkdirSync(dir,{recursive:true});
 const storage=multer.diskStorage({destination:dir,filename:(r,f,cb)=>cb(null,Date.now()+"-"+f.originalname.replace(/[^a-zA-Z0-9._-]/g,"_"))});
 app.use(express.static(__dirname));
 app.get("/", (req, res) => {
-res.sendFile(path.join(__dirname, "public", "index.html"));
+res.sendFile(path.join(__dirname, "Index.html"));
 });
 app.use("/uploads",express.static(dir));
 app.post("/upload",multer({storage}).single("movie"),(req,res)=>req.file?res.json({url:"/uploads/"+req.file.filename,name:req.file.originalname}):res.status(400).json({error:"No movie"}));
